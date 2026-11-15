@@ -2,8 +2,10 @@
 
 Scrapes a Zendesk Help Center into clean Markdown, keeps an OpenAI vector store in sync with it once a day (uploading only what changed), and backs a support assistant that answers from those docs with cited article URLs.
 
-- **Daily job logs:** _published after the first scheduled run on Railway (link added in a follow-up commit)._
-- **Sample answer:** _screenshot of the assistant answering "How do I add a YouTube video?" added in a follow-up commit._
+- **Daily job logs:** [last run + run history](https://gist.github.com/ndlabdev/263627b3c353d209a84c23cc3b824788) (`latest.json` is the last run, `history.log` has one line per run)
+- **Sample answer:** the assistant answering "How do I add a YouTube video?" in the OpenAI Playground, with the verbatim system prompt, File search on the synced store, and the cited article
+
+![Assistant answering "How do I add a YouTube video?" with a cited Article URL](docs/playground-youtube.png)
 
 ## Run with Docker
 
