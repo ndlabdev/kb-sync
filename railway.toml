@@ -1,0 +1,13 @@
+# Railway: run main.py once a day as a cron job, built from the Dockerfile.
+# The image's CMD (`python main.py`) is the command each scheduled run executes; it exits
+# 0 on success and 1 on failure. Secrets are set as service variables in Railway, not here.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# 02:13 UTC daily (09:13 in Vietnam). Off the top of the hour, when schedulers are busiest.
+cronSchedule = "13 2 * * *"
+# A cron run that fails should be reported, not retried in a loop.
+restartPolicyType = "NEVER"
