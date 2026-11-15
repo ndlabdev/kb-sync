@@ -65,7 +65,7 @@ Verified runs: first sync `added=396`; next run `skipped=396` with nothing uploa
 
 ## Daily job
 
-A Railway cron job built from the `Dockerfile` (`railway.toml`), daily at 02:13 UTC. Variables: `OPENAI_API_KEY`, `VECTOR_STORE_ID`, `GIST_ID`, `GIST_TOKEN`.
+A Railway cron job built from the `Dockerfile` (`railway.toml`), daily at 03:00 UTC, after the help-center team's US working day, so each day's edits are synced overnight. Variables: `OPENAI_API_KEY`, `VECTOR_STORE_ID`, `GIST_ID`, `GIST_TOKEN`.
 
 ## Notes
 

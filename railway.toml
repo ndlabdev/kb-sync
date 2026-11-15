@@ -7,7 +7,8 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-# 02:13 UTC daily (09:13 in Vietnam). Off the top of the hour, when schedulers are busiest.
-cronSchedule = "13 2 * * *"
+# 03:00 UTC daily = 22:00 CDT / 21:00 CST, after the help-center team's US Central working
+# day ends (7 PM), so each day's article edits are synced overnight. Railway cron is UTC.
+cronSchedule = "0 3 * * *"
 # A cron run that fails should be reported, not retried in a loop.
 restartPolicyType = "NEVER"
